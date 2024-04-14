@@ -6,7 +6,7 @@ const rep = async () => {
     // Wait for 1 second
     console.log("Checking status...")
   
-  
+    
     // Do something
     fetch('/status', { 
       method: 'GET'
@@ -58,6 +58,10 @@ const fileName = document.getElementById('file-name');
 const form = document.querySelector('.home-form');
 const submitButton = form.querySelector('button');
 
+const ldr = document.getElementById("LOADBO");
+const fhid = document.getElementById("nap")
+
+
 // Update the file name when a file is chosen
 fileUpload.addEventListener('change', (event) => {
   const file = event.target.files[0];
@@ -71,6 +75,8 @@ fileUpload.addEventListener('change', (event) => {
 // Add a submit event listener to the form
 form.addEventListener('submit', (event) => {
   event.preventDefault(); // Prevent the default form submission
+  fhid.style.visibility = "hidden"; 
+  ldr.style.visibility = "visible";
 
   // Create a new FormData object
   const formData = new FormData();
@@ -90,7 +96,7 @@ form.addEventListener('submit', (event) => {
     .then(response => response.text())
     .then(data => {
       console.log(data); // Handle the response from the server
-      alert('File uploaded successfully!'); // Show success message to user
+      // alert('File uploaded successfully!'); // Show success message to user
     })
     .catch(error => {
       console.error('Error:', error); // Handle any errors
