@@ -14,8 +14,8 @@ semaphore = threading.Semaphore(max_threads)
 client = ElevenLabs(api_key=elevenlabs_api_key)
 
 speaker_ids = {
-    "HOST": "5PIw5p7U2UKtFRaB15Sg",
-    "GUEST": "G17SuINrv2H9FC6nvetn"
+    "HOST": "l1wlntn2aexh1HOTSjUS",
+    "GUEST": "ApsbCjXt5HguctE80a0i"
 }
 
 def generate_audio(data_list):

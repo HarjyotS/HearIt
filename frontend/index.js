@@ -1,4 +1,53 @@
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
+const rep = async () => {
+  while (true) {
+    await sleep(1000)
+    // Wait for 1 second
+    console.log("Checking status...")
+  
+  
+    // Do something
+    fetch('/status', { 
+      method: 'GET'
+    })
+    .then(function(response) { return response.json(); })
+    .then(function(json) {
+      console.log(json["status"]);
+      if(json["status"] == "Processing"){
+        var ud = json["updates"];
+        var fsti = ``;
+        for (var i = 0; i < ud.length; i++) {
+          // Calculate the current time
+          var currentTime = Date.now();
+          
+          // Calculate the time difference in milliseconds
+          var timeDifference = currentTime - (ud[i]["time"] * 1000);
+          
+          // Convert the time difference to seconds
+          var timeDifferenceInSeconds = timeDifference / 1000;
+          
+          // Calculate minutes and seconds from the time difference
+          var minutes = Math.floor(timeDifferenceInSeconds / 60);
+          var seconds = Math.floor(timeDifferenceInSeconds % 60);
+          
+          // Format the minutes and seconds as a string
+          var timeAgoString = `(${minutes} minutes and ${seconds} seconds ago)`;
+          
+          // Update the fsti string with the message and time ago
+          fsti += `${ud[i]["message"]} ${timeAgoString}<br>`;
+        }
+        document.getElementById("updates").innerHTML = fsti;
+      }
+      if(json["status"] == "Complete"){
+        window.location.replace("view.html")
+      }
+      // use the json
+    });
+  }
+}
+
+rep()
 document.getElementById("file-upload").onchange = function(){
     document.querySelector("#file-name").textContent = this.files[0].name;
   }

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
+    <script src="view.js" defer></script>
     <style data-tag="reset-style-sheet">
         html {
             line-height: 1.15;
@@ -52,6 +53,7 @@
             font-family: inherit;
             font-size: 100%;
             line-height: 1.15;
+            height: 40%;
             margin: 0;
         }
 
@@ -131,6 +133,11 @@
     <div>
         <link href="./view.css" rel="stylesheet" />
         <div class="view-container">
+            <script>
+                fetch("/restartstat", {
+                    method: "get",
+                });
+            </script>
             <div class="view-container1">
                 <nav class="navigation-links1-nav navigation-links1-root-class-name8"><span
                         class="navigation-links1-text"><span>Main Page</span></span><span
@@ -139,12 +146,20 @@
                 <h1 class="view-text">HearIt</h1><span class="view-text1"><span class="view-text2">Your Engaging Gateway
                         to Internet&nbsp;</span><br /></span>
                 <div class="view-container2">
-                    <div class="view-container3"><audio controls="" autoplay="">
+                    <div class="view-container3"><audio controls="" autoplay="0" autoplay="false">
                             <source src="https://9b1d-64-165-34-3.ngrok-free.app/release" type="audio/wav" />
                             Your browser does not support the audio element.
                         </audio></div>
-                </div><span class="view-text4">Script </span>
+                    
+                </div> <input id="que" style="padding: 10px;margin-top: 30px;" placeholder="Questions?" type="text" class="input">
+                <button class="button" style="margin: 20px;" id="ask">Ask</button>
+                <!-- <span class="view-text4">Script </span> -->
+                <div id="bad" style="visibility: hidden;" class="view-container3"><audio id="tra" autostart="false" controls="" autoplay="0" autoplay="false">
+                    <source id="adad" src="" type="audio/wav" />
+                    Your browser does not support the audio element.
+                </audio></div>
             </div>
+            
         </div>
     </div>
 </body>

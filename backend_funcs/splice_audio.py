@@ -11,7 +11,7 @@ def splice_audio(audio_folder, output_file, data_list):
         if file_name.endswith(".mp3"):
             file_path = os.path.join(audio_folder, str(counter) + ".mp3")
             audio, sr = sf.read(file_path)
-            audio_segments.append(audio * (4.5 if data_list["podcast"]["transcript"][counter]["speaker_id"] == "HOST" else 0.8))
+            audio_segments.append(audio * (0.5 if data_list["podcast"]["transcript"][counter]["speaker_id"] == "HOST" else 1.2))
             sample_rate = sr  # Assign the sample rate
         counter += 1
 

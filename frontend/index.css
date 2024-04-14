@@ -20,6 +20,14 @@
   color: #ffffff;
   font-family: "Gloria Hallelujah";
 }
+.home-text3 {
+  color: #ffffff;
+  font-family: "helvetica";
+  margin: auto;
+margin-top: 32em;
+  position: relative;
+
+}
 .home-form {
   left: 0px;
   right: 0px;

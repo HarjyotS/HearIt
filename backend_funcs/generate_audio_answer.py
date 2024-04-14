@@ -1,4 +1,3 @@
-from read_pdf import read_pdf
 from langchain_community.document_loaders import TextLoader
 from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import CharacterTextSplitter
@@ -6,6 +5,22 @@ from langchain_chroma import Chroma
 from elevenlabs import save
 from elevenlabs.client import ElevenLabs
 from openai import OpenAI
+from langchain_community.document_loaders import PyPDFLoader
+
+# gives vector format
+def read_pdf(file_path):
+    loader = PyPDFLoader(file_path)
+    pages = loader.load_and_split()
+    return pages
+
+# gives plain text
+def read_pdf_plain(file_path):
+    loader = PyPDFLoader(file_path)
+    pages = loader.load()
+    pages_plain = ""
+    for page in pages:
+        pages_plain += page.page_content
+    return pages_plain
 
 with open("api_key.txt", "r") as f:
     keys = f.read().split(",")
@@ -16,8 +31,8 @@ client = OpenAI(api_key=openai_api_key)
 audio_client = ElevenLabs(api_key=elevenlabs_api_key)
 
 speaker_ids = {
-    "HOST": "5PIw5p7U2UKtFRaB15Sg",
-    "GUEST": "G17SuINrv2H9FC6nvetn"
+    "HOST": "Crm8VULvkVs5ZBDa1Ixm",
+    "GUEST": "ApsbCjXt5HguctE80a0i"
 }
 
 def find_context(file_path, query):
