@@ -85,7 +85,10 @@
         [type="submit"]:-moz-focus {
             outline: 1px dotted ButtonText;
         }
+        .boom{
+            animation: breathe 5s infinite;
 
+        }
         a {
             color: inherit;
             text-decoration: inherit;
@@ -152,14 +155,15 @@
                 </nav>                
                 <h1 class="view-text">HearIt</h1><span class="view-text1"><span class="view-text2">Your Engaging Gateway
                         to Internet&nbsp;</span><br /></span>
+                <span style="padding-top: 10px;margin-top: 20px;font-size: small;" class="view-text2">Your podcast has been generated below!</span>
                 <div class="view-container2">
                     <div class="view-container3"><audio controls="" autoplay="0" autoplay="false">
                             <source src="https://9b1d-64-165-34-3.ngrok-free.app/release" type="audio/wav" />
                             Your browser does not support the audio element.
                         </audio></div>
                     
-                </div> <input id="que" style="padding: 10px;margin-top: 30px;" placeholder="Questions?" type="text" class="input">
-                <button class="button" style="margin: 20px;" id="ask">Ask</button>
+                </div> <input id="que" style="padding: 10px;margin-top: 20px;" placeholder="Questions?" type="text" class="input">
+                <button class="button boom" style="margin: 20px;" id="ask">Ask</button>
                 <!-- <span class="view-text4">Script </span> -->
                 <div id="bad" style="visibility: hidden;" class="view-container3"><audio id="tra" autostart="false" controls="" autoplay="0" autoplay="false">
                     <source id="adad" src="" type="audio/wav" />
