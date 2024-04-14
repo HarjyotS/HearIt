@@ -1,12 +1,11 @@
 from openai import OpenAI
+from read_pdf import read_pdf_plain
 import json
 
 with open("api_key.txt", "r") as f:
     keys = f.read().split(",")
     elevenlabs_api_key = keys[0]
     openai_api_key = keys[1][:-1]
-
-print(repr(openai_api_key))
 
 client = OpenAI(api_key=openai_api_key)
 
@@ -56,3 +55,6 @@ def generate_script(content):
   for i in range(len(c["podcast"]["transcript"])):
      print(c["podcast"]["transcript"][i]["speaker_id"], c["podcast"]["transcript"][i]["text"])
   return c
+
+# Example usage
+# print(generate_script(read_pdf_plain("backend_funcs/test.pdf")))

@@ -22,3 +22,6 @@ def splice_audio(audio_folder, output_file, data_list):
         final_audio = np.concatenate((final_audio, audio, pause))
 
     sf.write(output_file, final_audio, sample_rate)
+
+# Example usage
+# splice_audio("audio_files", "final_audio_with_pauses.wav", data_list)
