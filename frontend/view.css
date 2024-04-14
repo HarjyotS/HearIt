@@ -1,0 +1,94 @@
+.navigation-links1-nav {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  .navigation-links1-navlink {
+    color: #ffffff;
+    font-family: "Gloria Hallelujah";
+    text-decoration: none;
+  }
+  .navigation-links1-text {
+    color: #ffffff;
+    font-family: "Gloria Hallelujah";
+    margin-left: var(--dl-space-space-twounits);
+  }
+  .navigation-links1-text1 {
+    color: #ffffff;
+    font-family: "Gloria Hallelujah";
+    margin-left: var(--dl-space-space-twounits);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .navigation-links1-root-class-name19 {
+    margin-top: var(--dl-space-space-unit);
+  }
+  .navigation-links1-root-class-name8 {
+    margin-top: var(--dl-space-space-unit);
+  }
+  @media(max-width: 767px) {
+    .navigation-links1-nav {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .navigation-links1-navlink {
+      margin-bottom: var(--dl-space-space-unit);
+    }
+    .navigation-links1-text {
+      margin-left: 0;
+      margin-bottom: var(--dl-space-space-unit);
+    }
+    .navigation-links1-text1 {
+      margin-left: 0;
+      margin-bottom: var(--dl-space-space-unit);
+    }
+  }
+  
+  .view-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .view-container1 {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-image: conic-gradient(from -50deg at 50% 50%, #000000 0deg, #138AA4 360deg);
+  }
+  .view-text {
+    color: #ffffff;
+    font-size: 4em;
+    font-family: "Gloria Hallelujah";
+    padding-top: var(--dl-space-space-oneandhalfunits);
+  }
+  .view-text1 {
+    padding-top: var(--dl-space-space-unit);
+  }
+  .view-text2 {
+    color: #ffffff;
+    font-family: "Gloria Hallelujah";
+  }
+  .view-container2 {
+    margin-top: var(--dl-space-space-fourunits);
+  }
+  .view-container3 {
+    display: contents;
+  }
+  .view-text4 {
+    color: #ffffff;
+    margin-top: var(--dl-space-space-threeunits);
+  }
+  

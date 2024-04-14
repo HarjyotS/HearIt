@@ -1,0 +1,54 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  background-image: conic-gradient(from -50deg at 50% 50%, #000000 0deg, #138AA4 360deg);
+}
+.home-text {
+  color: #ffffff;
+  font-size: 4em;
+  font-family: "Gloria Hallelujah";
+  padding-top: var(--dl-space-space-oneandhalfunits);
+}
+.home-text1 {
+  padding-top: var(--dl-space-space-unit);
+}
+.home-text2 {
+  color: #ffffff;
+  font-family: "Gloria Hallelujah";
+}
+.home-form {
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  height: 200px ;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  align-self: stretch;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.home-textinput {
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin-top: 1em;
+  padding: 70px 44px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+color: white;
+border-radius: 10px;
+}

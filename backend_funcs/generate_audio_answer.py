@@ -60,8 +60,9 @@ def generate_audio_answer(file_path, query):
 
     # Save the audio to a file named after the speaker ID
     filename = "answer.mp3"
-    save(audio, f"./audio_files/{filename}")
+    save(audio, f"./{filename}")
     print(f"Audio saved for HOST in {filename}")
+    return answer
 
 # Example Usage
 # generate_audio_answer("backend_funcs/test.pdf", "How is the recovery usually done?")

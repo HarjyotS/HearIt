@@ -7,7 +7,7 @@ with open("api_key.txt", "r") as f:
     elevenlabs_api_key = keys[0]
     openai_api_key = keys[1][:-1]
 
-max_threads = 4
+max_threads = 5
 semaphore = threading.Semaphore(max_threads)
 
 # Initialize the ElevenLabs client
@@ -45,4 +45,4 @@ def generate_files(item, index):
         print(f"Audio saved for {item['speaker_id']} in {filename}")
         
 # Example usage
-# generate_audio(data_list)
+# generate_audio(data_list["podcast"]["transcript"])

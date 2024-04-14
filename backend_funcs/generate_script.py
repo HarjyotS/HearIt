@@ -1,5 +1,4 @@
 from openai import OpenAI
-from read_pdf import read_pdf_plain
 import json
 
 with open("api_key.txt", "r") as f:
@@ -52,8 +51,6 @@ def generate_script(content):
   # print(c)
   # print("--------------------\n\n\n-------------------")
   # print(c["podcast"]["transcript"])
-  for i in range(len(c["podcast"]["transcript"])):
-     print(c["podcast"]["transcript"][i]["speaker_id"], c["podcast"]["transcript"][i]["text"])
   return c
 
 # Example usage
