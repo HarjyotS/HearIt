@@ -43,6 +43,3 @@ def generate_files(item, index):
         filename = f"{index}.mp3"
         save(audio, f"./audio_files/{filename}")
         print(f"Audio saved for {item['speaker_id']} in {filename}")
-
-
-generate_audio(data_list)
